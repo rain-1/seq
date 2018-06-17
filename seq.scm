@@ -10,12 +10,19 @@
 (library (rain-1 seq)
   (export
     elt?
-    cat-get-elt
+    elt-get-elt
     cat?
     cat-get-seqs
     seq->dlist
     seq->list
     seq-length)
+  (import (rnrs))
+
+(define (fold kons knil lst)
+  (if (null? lst)
+      knil
+      (kons (car lst)
+	    (fold kons knil (cdr lst)))))
 
 (define (elt? exp)
   (and (pair? exp)
