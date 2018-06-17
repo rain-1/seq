@@ -1,0 +1,9 @@
+#!r6rs ; -*- mode: scheme; coding: utf-8 -*-
+(import (akku format manifest))
+
+(akku-package ("seq" "0.0.1-alpha.0")
+  (synopsis "This library provides tools for efficiently building up complex list structures.")
+  (authors "Raymond Nicholson <rain1@airmail.cc>")
+  (license "BSD")
+  (location (git "https://github.com/rain-1/seq.git"))
+)
